@@ -1,0 +1,8 @@
+prefix=/home/vagrant/training_ws/src/week-5-robotics-BestCharlemagne/week_5_robotics/cmake-build-debug/devel
+
+Name: week_5_robotics
+Description: Description of week_5_robotics
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

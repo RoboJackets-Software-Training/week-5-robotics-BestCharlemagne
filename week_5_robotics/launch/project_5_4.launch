@@ -1,0 +1,17 @@
+<launch>
+
+    <node pkg="buzzsim" type="buzzsim" name="particle_filter_buzzsim" output="screen">
+        <param name="world_name" value="imu_test" />
+        <param name="config_path" value="$(find week_5_robotics)/config/world.yaml" />
+    </node>
+
+    <rosparam command="load" file="$(find week_5_robotics)/config/world.yaml"/>
+
+    <node pkg="week_5_robotics" type="buzzsim_helper" name="buzzsim_helper" output="screen">
+    </node>
+
+    <node pkg="week_5_robotics" type="particle_filter" name="particle_filter" output="screen">
+    </node>
+
+    <node type="rviz" name="rviz" pkg="rviz" args="-d $(find week_5_robotics)/project_5_4/project_5_4.rviz" />
+</launch>
